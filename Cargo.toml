@@ -1,0 +1,12 @@
+[package]
+name = "mutiny"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bevy = "0.14.0"
+bevy_asset_loader = "0.21.0"
+bevy_gltf_blueprints = "0.11.0"
+bevy_gltf_components = "0.6.0"
+bevy_rapier2d = "0.27.0"
+bevy_registry_export = "0.4.0"
