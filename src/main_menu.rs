@@ -1,22 +1,12 @@
-use bevy::{math::VectorSpace, prelude::*};
-use bevy_gltf_blueprints::{BlueprintName, SpawnHere};
+use bevy::prelude::*;
+use blenvy::{BlueprintInfo, HideUntilReady, SpawnBlueprint};
 
 use crate::{
     assets::CoreAssets,
     states::{AppState, GameState},
 };
 
-fn setup_main_menu(mut commands: Commands, core_assets: Res<CoreAssets>, gltfs: Res<Assets<Gltf>>) {
-    let Some(ref main_menu_scene) = core_assets.main_menu_scene else {
-        error!("No main_menu_scene defined in core assets!");
-        panic!();
-    };
-
-    let Some(main_menu_scene) = gltfs.get(main_menu_scene) else {
-        error!("main_menu_scene not loaded");
-        panic!();
-    };
-
+fn setup_main_menu(mut commands: Commands, core_assets: Res<CoreAssets>) {
     commands.insert_resource(AmbientLight {
         color: bevy::color::palettes::basic::WHITE.into(),
         brightness: 0.2,
@@ -39,7 +29,7 @@ fn setup_main_menu(mut commands: Commands, core_assets: Res<CoreAssets>, gltfs: 
         text: Text::from_section(
             "MUTINY",
             TextStyle {
-                font: core_assets.font.clone().unwrap(),
+                font: core_assets.font.clone(),
                 font_size: 72.0,
                 ..Default::default()
             },
@@ -48,16 +38,10 @@ fn setup_main_menu(mut commands: Commands, core_assets: Res<CoreAssets>, gltfs: 
     });
 
     commands.spawn((
-        BlueprintName("Loading Spinner".to_string()),
-        SpawnHere,
-        TransformBundle::from_transform(Transform::from_xyz(0.0, 0.0, 0.0)),
-    ));
-
-    commands.spawn((
-        SceneBundle {
-            scene: main_menu_scene.scenes[0].clone(),
-            ..Default::default()
-        },
+        BlueprintInfo::from_path("levels/MainMenu.glb"),
+        SpawnBlueprint,
+        HideUntilReady,
+        TransformBundle::from_transform(Transform::default()),
         StateScoped(GameState::MainMenu),
     ));
 }
@@ -69,17 +53,14 @@ fn go_to_main_menu(mut next_game_state: ResMut<NextState<GameState>>) {
 fn test(
     mut commands: Commands,
     input: Res<ButtonInput<KeyCode>>,
-    query: Query<&BlueprintName, Added<BlueprintName>>,
     spinners: Query<Entity, With<crate::ui::Spinner>>,
 ) {
-    for bp in query.iter() {
-        info!("trying to spawn {}", bp.0);
-    }
     if input.just_pressed(KeyCode::Space) {
         debug!("{}", spinners.iter().count());
         commands.spawn((
-            BlueprintName("Loading Spinner".to_string()),
-            SpawnHere,
+            BlueprintInfo::from_path("models/library/Loading Spinner.glb"),
+            SpawnBlueprint,
+            HideUntilReady,
             TransformBundle::from_transform(Transform::from_xyz(0.0, 0.0, 0.0)),
         ));
     }

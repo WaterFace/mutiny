@@ -5,8 +5,6 @@ edition = "2021"
 
 [dependencies]
 bevy = "0.14.0"
-bevy_asset_loader = { version = "0.21.0", features = ["standard_dynamic_assets"] }
-bevy_gltf_blueprints = "0.11.0"
-bevy_gltf_components = "0.6.0"
+bevy_asset_loader = { version = "0.21.0", features = ["standard_dynamic_assets", "2d"] }
+blenvy = { git = "https://github.com/kaosat-dev/Blenvy.git", branch = "blenvy" }
 bevy_rapier2d = "0.27.0"
-bevy_registry_export = "0.4.0"

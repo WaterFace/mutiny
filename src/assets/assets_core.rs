@@ -1,23 +1,22 @@
-use bevy::gltf::Gltf;
 use bevy::prelude::*;
-use bevy::utils::HashMap;
 use bevy_asset_loader::prelude::*;
 
 #[allow(unused)]
 #[derive(AssetCollection, Resource)]
 pub struct CoreAssets {
     /// Global game font.
-    #[asset(key = "font", optional)]
-    pub font: Option<Handle<Font>>,
+    #[asset(key = "font")]
+    pub font: Handle<Font>,
 
-    /// Main Menu scene
-    #[asset(key = "main_menu_scene", optional)]
-    pub main_menu_scene: Option<Handle<Gltf>>,
+    /// spinner texture. represents loading, saving, reloading, etc.
+    #[asset(key = "spinner_texture")]
+    pub spinner_texture: Handle<Image>,
 
-    /// GLTF models
-    #[asset(key = "models", collection(typed, mapped), optional)]
-    pub models: Option<HashMap<String, Handle<Gltf>>>,
+    /// panel texture. used for non-button ui panels. should be a ninepatch texture
+    #[asset(key = "panel_texture")]
+    pub panel_texture: Handle<Image>,
 
-    #[asset(key = "spinner", optional)]
-    pub spinner: Option<Handle<Gltf>>,
+    /// button texture. used for ui buttons. should be a ninepatch texture, and a three-by-one spritesheet
+    #[asset(key = "button_texture")]
+    pub button_texture: Handle<Image>,
 }

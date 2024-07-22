@@ -1,6 +1,5 @@
-use bevy::{log::LogPlugin, prelude::*};
-use bevy_gltf_blueprints::{BlueprintsPlugin, GltfFormat};
-use bevy_registry_export::ExportRegistryPlugin;
+use bevy::prelude::*;
+use blenvy::BlenvyPlugin;
 
 mod assets;
 mod main_menu;
@@ -9,20 +8,8 @@ mod ui;
 
 fn main() {
     App::new()
-        .add_plugins(DefaultPlugins.set(LogPlugin {
-            level: bevy::log::Level::DEBUG,
-            ..Default::default()
-        }))
-        .add_plugins(ExportRegistryPlugin::default())
-        .add_plugins(BlueprintsPlugin {
-            legacy_mode: false,
-            library_folder: "models/library".into(),
-            material_library: true,
-            material_library_folder: "materials".into(),
-            format: GltfFormat::GLB,
-            aabbs: true,
-            ..Default::default()
-        })
+        .add_plugins(DefaultPlugins)
+        .add_plugins(BlenvyPlugin::default())
         .add_plugins(states::StatesPlugin)
         .add_plugins(assets::AssetsPlugin::default())
         .add_plugins(ui::UiPlugin)

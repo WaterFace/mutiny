@@ -676,27 +676,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "bevy_gltf_blueprints"
-version = "0.11.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d22c3e698cb4ccc743ac86bf6b42d7c7c7070254bef511c8e5f64d8f44286bcb"
-dependencies = [
- "bevy",
- "bevy_gltf_components",
-]
-
-[[package]]
-name = "bevy_gltf_components"
-version = "0.6.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e0fe5bf69e8f9e85fe671540d9cc2052ac65333cfbed8d44f65aea6d20d40df3"
-dependencies = [
- "bevy",
- "ron",
- "serde",
-]
-
-[[package]]
 name = "bevy_hierarchy"
 version = "0.14.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -892,19 +871,6 @@ dependencies = [
  "quote",
  "syn 2.0.71",
  "uuid",
-]
-
-[[package]]
-name = "bevy_registry_export"
-version = "0.4.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0d9f3463eaf1556f036f162c4e781a54bfd8857c701f1c06c657cd6f81b1621f"
-dependencies = [
- "bevy",
- "bevy_app",
- "bevy_ecs",
- "bevy_reflect",
- "serde_json",
 ]
 
 [[package]]
@@ -1264,6 +1230,18 @@ dependencies = [
  "cc",
  "cfg-if",
  "constant_time_eq",
+]
+
+[[package]]
+name = "blenvy"
+version = "0.1.0-alpha.1"
+source = "git+https://github.com/kaosat-dev/Blenvy.git?branch=blenvy#4a72ed68bf2024f014b7f3695fcd929fa66141d3"
+dependencies = [
+ "bevy",
+ "gltf",
+ "ron",
+ "serde",
+ "serde_json",
 ]
 
 [[package]]
@@ -2512,10 +2490,8 @@ version = "0.1.0"
 dependencies = [
  "bevy",
  "bevy_asset_loader",
- "bevy_gltf_blueprints",
- "bevy_gltf_components",
  "bevy_rapier2d",
- "bevy_registry_export",
+ "blenvy",
 ]
 
 [[package]]
