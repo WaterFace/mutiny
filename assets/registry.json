@@ -738,6 +738,82 @@
       "type": "object",
       "typeInfo": "Enum"
     },
+    "bevy_asset::handle::Handle<bevy_asset_loader::standard_dynamic_asset::StandardDynamicAssetArrayCollection>": {
+      "isComponent": true,
+      "isResource": false,
+      "oneOf": [
+        {
+          "items": false,
+          "prefixItems": [
+            {
+              "type": {
+                "$ref": "#/$defs/std::sync::Arc<bevy_asset::handle::StrongHandle>"
+              }
+            }
+          ],
+          "short_name": "Strong",
+          "title": "Strong",
+          "type": "array",
+          "typeInfo": "Tuple"
+        },
+        {
+          "items": false,
+          "prefixItems": [
+            {
+              "type": {
+                "$ref": "#/$defs/bevy_asset::id::AssetId<bevy_asset_loader::standard_dynamic_asset::StandardDynamicAssetArrayCollection>"
+              }
+            }
+          ],
+          "short_name": "Weak",
+          "title": "Weak",
+          "type": "array",
+          "typeInfo": "Tuple"
+        }
+      ],
+      "short_name": "Handle<StandardDynamicAssetArrayCollection>",
+      "title": "bevy_asset::handle::Handle<bevy_asset_loader::standard_dynamic_asset::StandardDynamicAssetArrayCollection>",
+      "type": "object",
+      "typeInfo": "Enum"
+    },
+    "bevy_asset::handle::Handle<bevy_asset_loader::standard_dynamic_asset::StandardDynamicAssetCollection>": {
+      "isComponent": true,
+      "isResource": false,
+      "oneOf": [
+        {
+          "items": false,
+          "prefixItems": [
+            {
+              "type": {
+                "$ref": "#/$defs/std::sync::Arc<bevy_asset::handle::StrongHandle>"
+              }
+            }
+          ],
+          "short_name": "Strong",
+          "title": "Strong",
+          "type": "array",
+          "typeInfo": "Tuple"
+        },
+        {
+          "items": false,
+          "prefixItems": [
+            {
+              "type": {
+                "$ref": "#/$defs/bevy_asset::id::AssetId<bevy_asset_loader::standard_dynamic_asset::StandardDynamicAssetCollection>"
+              }
+            }
+          ],
+          "short_name": "Weak",
+          "title": "Weak",
+          "type": "array",
+          "typeInfo": "Tuple"
+        }
+      ],
+      "short_name": "Handle<StandardDynamicAssetCollection>",
+      "title": "bevy_asset::handle::Handle<bevy_asset_loader::standard_dynamic_asset::StandardDynamicAssetCollection>",
+      "type": "object",
+      "typeInfo": "Enum"
+    },
     "bevy_asset::handle::Handle<bevy_audio::audio_source::AudioSource>": {
       "isComponent": true,
       "isResource": false,
@@ -1611,6 +1687,98 @@
       ],
       "short_name": "AssetId<LoadedFolder>",
       "title": "bevy_asset::id::AssetId<bevy_asset::folder::LoadedFolder>",
+      "type": "object",
+      "typeInfo": "Enum"
+    },
+    "bevy_asset::id::AssetId<bevy_asset_loader::standard_dynamic_asset::StandardDynamicAssetArrayCollection>": {
+      "isComponent": false,
+      "isResource": false,
+      "oneOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "index": {
+              "title": "index",
+              "type": {
+                "$ref": "#/$defs/bevy_asset::assets::AssetIndex"
+              }
+            }
+          },
+          "required": [
+            "index"
+          ],
+          "short_name": "Index",
+          "title": "Index",
+          "type": "object",
+          "typeInfo": "Struct"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "uuid": {
+              "title": "uuid",
+              "type": {
+                "$ref": "#/$defs/uuid::Uuid"
+              }
+            }
+          },
+          "required": [
+            "uuid"
+          ],
+          "short_name": "Uuid",
+          "title": "Uuid",
+          "type": "object",
+          "typeInfo": "Struct"
+        }
+      ],
+      "short_name": "AssetId<StandardDynamicAssetArrayCollection>",
+      "title": "bevy_asset::id::AssetId<bevy_asset_loader::standard_dynamic_asset::StandardDynamicAssetArrayCollection>",
+      "type": "object",
+      "typeInfo": "Enum"
+    },
+    "bevy_asset::id::AssetId<bevy_asset_loader::standard_dynamic_asset::StandardDynamicAssetCollection>": {
+      "isComponent": false,
+      "isResource": false,
+      "oneOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "index": {
+              "title": "index",
+              "type": {
+                "$ref": "#/$defs/bevy_asset::assets::AssetIndex"
+              }
+            }
+          },
+          "required": [
+            "index"
+          ],
+          "short_name": "Index",
+          "title": "Index",
+          "type": "object",
+          "typeInfo": "Struct"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "uuid": {
+              "title": "uuid",
+              "type": {
+                "$ref": "#/$defs/uuid::Uuid"
+              }
+            }
+          },
+          "required": [
+            "uuid"
+          ],
+          "short_name": "Uuid",
+          "title": "Uuid",
+          "type": "object",
+          "typeInfo": "Struct"
+        }
+      ],
+      "short_name": "AssetId<StandardDynamicAssetCollection>",
+      "title": "bevy_asset::id::AssetId<bevy_asset_loader::standard_dynamic_asset::StandardDynamicAssetCollection>",
       "type": "object",
       "typeInfo": "Enum"
     },
@@ -13385,6 +13553,17 @@
       "title": "isize",
       "type": "int",
       "typeInfo": "Value"
+    },
+    "mutiny::ui::Spinner": {
+      "additionalProperties": false,
+      "isComponent": true,
+      "isResource": false,
+      "properties": {},
+      "required": [],
+      "short_name": "Spinner",
+      "title": "mutiny::ui::Spinner",
+      "type": "object",
+      "typeInfo": "Struct"
     },
     "petgraph::graph::DiGraph<bevy_animation::graph::AnimationGraphNode, (), u32>": {
       "isComponent": false,
