@@ -1,6 +1,6 @@
 ({
     "font": File(path: "fonts/Not Jam UI Condensed 19.ttf"),
-    "main_menu_scene": File(path: "models/MainMenu.glb"),
-    "models": Folder(path: "models/library"),
-    "spinner": File(path: "models/library/Loading Spinner.glb"),
+    "spinner_texture": Image(path: "sprites/Loading.png", sampler: Nearest),
+    "panel_texture": Image(path: "sprites/UI Panel.png", sampler: Nearest),
+    "button_texture": Image(path: "sprites/Button.png", sampler: Nearest),
 })
