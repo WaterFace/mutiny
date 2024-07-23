@@ -1,0 +1,25 @@
+{
+	"asset":{
+		"generator":"Khronos glTF Blender I/O v4.2.57",
+		"version":"2.0"
+	},
+	"scene":0,
+	"scenes":[
+		{
+			"extras":{
+				"export_path":"blueprints/Spinner.gltf",
+				"BlueprintAssets":"(assets: [])",
+				"bevy_components":"{\"mutiny::ui::spinner::Spinner\": \"()\"}"
+			},
+			"name":"__temp_sceneSpinner",
+			"nodes":[
+				0
+			]
+		}
+	],
+	"nodes":[
+		{
+			"name":"Empty"
+		}
+	]
+}

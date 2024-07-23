@@ -1144,44 +1144,6 @@
       "type": "object",
       "typeInfo": "Enum"
     },
-    "bevy_asset::handle::Handle<bevy_pbr::wireframe::WireframeMaterial>": {
-      "isComponent": true,
-      "isResource": false,
-      "long_name": "bevy_asset::handle::Handle<bevy_pbr::wireframe::WireframeMaterial>",
-      "oneOf": [
-        {
-          "items": false,
-          "long_name": "Strong",
-          "prefixItems": [
-            {
-              "type": {
-                "$ref": "#/$defs/std::sync::Arc<bevy_asset::handle::StrongHandle>"
-              }
-            }
-          ],
-          "short_name": "Strong",
-          "type": "array",
-          "typeInfo": "Tuple"
-        },
-        {
-          "items": false,
-          "long_name": "Weak",
-          "prefixItems": [
-            {
-              "type": {
-                "$ref": "#/$defs/bevy_asset::id::AssetId<bevy_pbr::wireframe::WireframeMaterial>"
-              }
-            }
-          ],
-          "short_name": "Weak",
-          "type": "array",
-          "typeInfo": "Tuple"
-        }
-      ],
-      "short_name": "Handle<WireframeMaterial>",
-      "type": "object",
-      "typeInfo": "Enum"
-    },
     "bevy_asset::handle::Handle<bevy_render::mesh::mesh::Mesh>": {
       "isComponent": true,
       "isResource": false,
@@ -1445,44 +1407,6 @@
         }
       ],
       "short_name": "Handle<ColorMaterial>",
-      "type": "object",
-      "typeInfo": "Enum"
-    },
-    "bevy_asset::handle::Handle<bevy_sprite::mesh2d::wireframe2d::Wireframe2dMaterial>": {
-      "isComponent": true,
-      "isResource": false,
-      "long_name": "bevy_asset::handle::Handle<bevy_sprite::mesh2d::wireframe2d::Wireframe2dMaterial>",
-      "oneOf": [
-        {
-          "items": false,
-          "long_name": "Strong",
-          "prefixItems": [
-            {
-              "type": {
-                "$ref": "#/$defs/std::sync::Arc<bevy_asset::handle::StrongHandle>"
-              }
-            }
-          ],
-          "short_name": "Strong",
-          "type": "array",
-          "typeInfo": "Tuple"
-        },
-        {
-          "items": false,
-          "long_name": "Weak",
-          "prefixItems": [
-            {
-              "type": {
-                "$ref": "#/$defs/bevy_asset::id::AssetId<bevy_sprite::mesh2d::wireframe2d::Wireframe2dMaterial>"
-              }
-            }
-          ],
-          "short_name": "Weak",
-          "type": "array",
-          "typeInfo": "Tuple"
-        }
-      ],
-      "short_name": "Handle<Wireframe2dMaterial>",
       "type": "object",
       "typeInfo": "Enum"
     },
@@ -2252,52 +2176,6 @@
       "type": "object",
       "typeInfo": "Enum"
     },
-    "bevy_asset::id::AssetId<bevy_pbr::wireframe::WireframeMaterial>": {
-      "isComponent": false,
-      "isResource": false,
-      "long_name": "bevy_asset::id::AssetId<bevy_pbr::wireframe::WireframeMaterial>",
-      "oneOf": [
-        {
-          "additionalProperties": false,
-          "long_name": "Index",
-          "properties": {
-            "index": {
-              "long_name": "index",
-              "type": {
-                "$ref": "#/$defs/bevy_asset::assets::AssetIndex"
-              }
-            }
-          },
-          "required": [
-            "index"
-          ],
-          "short_name": "Index",
-          "type": "object",
-          "typeInfo": "Struct"
-        },
-        {
-          "additionalProperties": false,
-          "long_name": "Uuid",
-          "properties": {
-            "uuid": {
-              "long_name": "uuid",
-              "type": {
-                "$ref": "#/$defs/uuid::Uuid"
-              }
-            }
-          },
-          "required": [
-            "uuid"
-          ],
-          "short_name": "Uuid",
-          "type": "object",
-          "typeInfo": "Struct"
-        }
-      ],
-      "short_name": "AssetId<WireframeMaterial>",
-      "type": "object",
-      "typeInfo": "Enum"
-    },
     "bevy_asset::id::AssetId<bevy_render::mesh::mesh::Mesh>": {
       "isComponent": false,
       "isResource": false,
@@ -2617,52 +2495,6 @@
         }
       ],
       "short_name": "AssetId<ColorMaterial>",
-      "type": "object",
-      "typeInfo": "Enum"
-    },
-    "bevy_asset::id::AssetId<bevy_sprite::mesh2d::wireframe2d::Wireframe2dMaterial>": {
-      "isComponent": false,
-      "isResource": false,
-      "long_name": "bevy_asset::id::AssetId<bevy_sprite::mesh2d::wireframe2d::Wireframe2dMaterial>",
-      "oneOf": [
-        {
-          "additionalProperties": false,
-          "long_name": "Index",
-          "properties": {
-            "index": {
-              "long_name": "index",
-              "type": {
-                "$ref": "#/$defs/bevy_asset::assets::AssetIndex"
-              }
-            }
-          },
-          "required": [
-            "index"
-          ],
-          "short_name": "Index",
-          "type": "object",
-          "typeInfo": "Struct"
-        },
-        {
-          "additionalProperties": false,
-          "long_name": "Uuid",
-          "properties": {
-            "uuid": {
-              "long_name": "uuid",
-              "type": {
-                "$ref": "#/$defs/uuid::Uuid"
-              }
-            }
-          },
-          "required": [
-            "uuid"
-          ],
-          "short_name": "Uuid",
-          "type": "object",
-          "typeInfo": "Struct"
-        }
-      ],
-      "short_name": "AssetId<Wireframe2dMaterial>",
       "type": "object",
       "typeInfo": "Enum"
     },
@@ -8019,72 +7851,6 @@
       "type": "object",
       "typeInfo": "Struct"
     },
-    "bevy_pbr::wireframe::NoWireframe": {
-      "additionalProperties": false,
-      "isComponent": true,
-      "isResource": false,
-      "long_name": "bevy_pbr::wireframe::NoWireframe",
-      "properties": {},
-      "required": [],
-      "short_name": "NoWireframe",
-      "type": "object",
-      "typeInfo": "Struct"
-    },
-    "bevy_pbr::wireframe::Wireframe": {
-      "additionalProperties": false,
-      "isComponent": true,
-      "isResource": false,
-      "long_name": "bevy_pbr::wireframe::Wireframe",
-      "properties": {},
-      "required": [],
-      "short_name": "Wireframe",
-      "type": "object",
-      "typeInfo": "Struct"
-    },
-    "bevy_pbr::wireframe::WireframeColor": {
-      "additionalProperties": false,
-      "isComponent": true,
-      "isResource": false,
-      "long_name": "bevy_pbr::wireframe::WireframeColor",
-      "properties": {
-        "color": {
-          "type": {
-            "$ref": "#/$defs/bevy_color::color::Color"
-          }
-        }
-      },
-      "required": [
-        "color"
-      ],
-      "short_name": "WireframeColor",
-      "type": "object",
-      "typeInfo": "Struct"
-    },
-    "bevy_pbr::wireframe::WireframeConfig": {
-      "additionalProperties": false,
-      "isComponent": false,
-      "isResource": true,
-      "long_name": "bevy_pbr::wireframe::WireframeConfig",
-      "properties": {
-        "default_color": {
-          "type": {
-            "$ref": "#/$defs/bevy_color::color::Color"
-          }
-        },
-        "global": {
-          "type": {
-            "$ref": "#/$defs/bool"
-          }
-        }
-      },
-      "required": [
-        "global",
-        "default_color"
-      ],
-      "short_name": "WireframeConfig",
-      "type": "object",
-      "typeInfo": "Struct"
-    },
     "bevy_render::alpha::AlphaMode": {
       "isComponent": false,
       "isResource": false,
@@ -9108,72 +8874,6 @@
       "short_name": "Mesh2dHandle",
       "type": "array",
       "typeInfo": "TupleStruct"
-    },
-    "bevy_sprite::mesh2d::wireframe2d::NoWireframe2d": {
-      "additionalProperties": false,
-      "isComponent": true,
-      "isResource": false,
-      "long_name": "bevy_sprite::mesh2d::wireframe2d::NoWireframe2d",
-      "properties": {},
-      "required": [],
-      "short_name": "NoWireframe2d",
-      "type": "object",
-      "typeInfo": "Struct"
-    },
-    "bevy_sprite::mesh2d::wireframe2d::Wireframe2d": {
-      "additionalProperties": false,
-      "isComponent": true,
-      "isResource": false,
-      "long_name": "bevy_sprite::mesh2d::wireframe2d::Wireframe2d",
-      "properties": {},
-      "required": [],
-      "short_name": "Wireframe2d",
-      "type": "object",
-      "typeInfo": "Struct"
-    },
-    "bevy_sprite::mesh2d::wireframe2d::Wireframe2dColor": {
-      "additionalProperties": false,
-      "isComponent": true,
-      "isResource": false,
-      "long_name": "bevy_sprite::mesh2d::wireframe2d::Wireframe2dColor",
-      "properties": {
-        "color": {
-          "type": {
-            "$ref": "#/$defs/bevy_color::srgba::Srgba"
-          }
-        }
-      },
-      "required": [
-        "color"
-      ],
-      "short_name": "Wireframe2dColor",
-      "type": "object",
-      "typeInfo": "Struct"
-    },
-    "bevy_sprite::mesh2d::wireframe2d::Wireframe2dConfig": {
-      "additionalProperties": false,
-      "isComponent": false,
-      "isResource": true,
-      "long_name": "bevy_sprite::mesh2d::wireframe2d::Wireframe2dConfig",
-      "properties": {
-        "default_color": {
-          "type": {
-            "$ref": "#/$defs/bevy_color::srgba::Srgba"
-          }
-        },
-        "global": {
-          "type": {
-            "$ref": "#/$defs/bool"
-          }
-        }
-      },
-      "required": [
-        "global",
-        "default_color"
-      ],
-      "short_name": "Wireframe2dConfig",
-      "type": "object",
-      "typeInfo": "Struct"
     },
     "bevy_sprite::sprite::Anchor": {
       "isComponent": false,
@@ -14190,11 +13890,22 @@
       "type": "int",
       "typeInfo": "Value"
     },
-    "mutiny::ui::Spinner": {
+    "mutiny::ui::panel::Panel": {
       "additionalProperties": false,
       "isComponent": true,
       "isResource": false,
-      "long_name": "mutiny::ui::Spinner",
+      "long_name": "mutiny::ui::panel::Panel",
+      "properties": {},
+      "required": [],
+      "short_name": "Panel",
+      "type": "object",
+      "typeInfo": "Struct"
+    },
+    "mutiny::ui::spinner::Spinner": {
+      "additionalProperties": false,
+      "isComponent": true,
+      "isResource": false,
+      "long_name": "mutiny::ui::spinner::Spinner",
       "properties": {},
       "required": [],
       "short_name": "Spinner",
